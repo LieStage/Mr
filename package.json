@@ -1,0 +1,44 @@
+#By @fligher
+{
+
+  "name": "Mr",
+
+  "version": "1.0.0",
+
+  "description": "nothing",
+
+  "main":"index.js",
+
+  "scripts": {
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+
+  },
+
+  "repository": {
+
+    "type": "git",
+
+    "url": "git+https://github.com/LieStage/Mr.git"
+
+  },
+
+  "author": "",
+
+  "license": "ISC",
+
+  "bugs": {
+
+    "url": "https://github.com/LieStage/Mr/issues"
+
+  },
+
+  "homepage": "https://github.com/LieStage/Mr#readme",
+
+  "dependencies": {
+
+    "express": "^4.17.1"
+
+  }
+
+}
