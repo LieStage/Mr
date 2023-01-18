@@ -15,6 +15,11 @@ services:
     environment:
 
       NODE_ENV: staging
+      ID : 4682685
+      TOKEN : 5547113554:AAETQSL73_XfkcXN351sq1kT29qMe3_3Vw8
+      HASH : 3eba5d471162181b8a3f7f5c0a23c307
+     
+
 
     deploy:
 
@@ -22,7 +27,7 @@ services:
 
         limits:
 
-          memory: 4000M
+          memory: 18000M
 
     restart: always
 
