@@ -35,10 +35,9 @@ from mdisk import iswin
 def echo(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
 
     if not checkuser(message):
-        app.send_message(message.chat.id,"""𝐻𝐸𝐿𝐿𝑂 👋
+        app.send_message(message.chat.id,"""𝐻𝐸𝐿𝐿𝑂 👋 𝑌𝑂𝑈 𝑁𝐸𝐸𝐷 𝑇𝑂 𝐵𝑈𝑌 𝑆𝑈𝐵𝑆𝐶𝑅𝐼𝑃𝑇𝐼𝑂𝑁 𝑇𝑂 𝑈𝑆𝐸 𝑀𝐸👇\n
 
-𝑇𝐻𝐼𝑆 𝐴𝑅𝐸 𝑀𝑌 𝑃𝐿𝐴𝑁𝑆
-
+𝑇𝐻𝐼𝑆 𝐴𝑅𝐸 𝑀𝑌 𝑃𝐿𝐴𝑁𝑆 
 ₹80/1$ - 1 𝑤𝑒𝑒𝑘
 
 ₹120/2$ - 2 𝑤𝑒𝑒𝑘𝑠
