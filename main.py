@@ -201,15 +201,15 @@ def down(message,link):
         # actuall upload
         if info == "V":
             thumb,duration,width,height = mediainfo.allinfo(ele,thumbfile)
-            if not isPremmium : app.send_video(message.chat.id, video=ele, caption=f"{partt}**{filename}**", thumb=thumb, duration=duration, height=height, width=width, reply_to_message_id=message.id, progress=progress, progress_args=[message])
+            if not isPremmium : app.send_video(message.chat.id, video=ele, caption=f"<a href ="https://t.me/movie_time_botonly>{partt}**{filename}**</a>", thumb=thumb, duration=duration, height=height, width=width, reply_to_message_id=message.id, progress=progress, progress_args=[message])
             else:
                 with acc: tmsg = acc.send_video(temp_channel, video=ele, caption=f"{partt}**{filename}**", thumb=thumb, duration=duration, height=height, width=width, progress=progress, progress_args=[message])
                 app.copy_message(message.chat.id, temp_channel, tmsg.id, reply_to_message_id=message.id)
             if "-thumb.jpg" not in thumb: os.remove(thumb)
         else:
-            if not isPremmium : app.send_document(message.chat.id, document=ele, caption=f"{partt}**{filename}**", thumb=thumbfile, force_document=True, reply_to_message_id=message.id, progress=progress, progress_args=[message])
+            if not isPremmium : app.send_document(message.chat.id, document=ele, caption=f"<a href ="https://t.me/movie_time_botonly>{partt}**{filename}**</a>", thumb=thumbfile, force_document=True, reply_to_message_id=message.id, progress=progress, progress_args=[message])
             else:
-                with acc: tmsg = acc.send_document(temp_channel, document=ele, thumb=thumbfile, caption=f"{partt}**{filename}**", force_document=True, progress=progress, progress_args=[message])
+                with acc: tmsg = acc.send_document(temp_channel, document=ele, thumb=thumbfile, caption=f"<a href ="https://t.me/movie_time_botonly>{partt}**{filename}**</a>", force_document=True, progress=progress, progress_args=[message])
                 app.copy_message(message.chat.id, temp_channel, tmsg.id, reply_to_message_id=message.id)
        
         # deleting uploaded file
@@ -228,7 +228,13 @@ def down(message,link):
 def mdiskdown(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
     
     if not checkuser(message):
-        app.send_message(message.chat.id, '__You are either not **Authorized** or **Banned**__',reply_to_message_id=message.id)
+        app.send_message(message.chat.id, """𝐻𝐸𝐿𝐿𝑂 👋 𝑌𝑂𝑈 𝑁𝐸𝐸𝐷 𝑇𝑂 𝐵𝑈𝑌 𝑆𝑈𝐵𝑆𝐶𝑅𝐼𝑃𝑇𝐼𝑂𝑁 𝑇𝑂 𝑈𝑆𝐸 𝑀𝐸👇\n
+𝑇𝐻𝐼𝑆 𝐴𝑅𝐸 𝑀𝑌 𝑃𝐿𝐴𝑁𝑆 
+₹80/1$ - 1 𝑤𝑒𝑒𝑘
+₹120/2$ - 2 𝑤𝑒𝑒𝑘𝑠
+₹140/3$ - 3 𝑤𝑒𝑒𝑘𝑠
+₹160/4$ - 4 𝑤𝑒𝑒𝑘𝑠
+𝑈 𝑊𝐴𝑁𝑇 𝐽𝑈𝑆𝑇 𝐷𝑀 𝑀𝐸 :@fligher""",reply_to_message_id=message.id)
         return
 
     try:
@@ -248,7 +254,13 @@ def mdiskdown(client: pyrogram.client.Client, message: pyrogram.types.messages_a
 def thumb(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
     
     if not checkuser(message):
-        app.send_message(message.chat.id, '__You are either not **Authorized** or **Banned**__',reply_to_message_id=message.id)
+        app.send_message(message.chat.id, """𝐻𝐸𝐿𝐿𝑂 👋 𝑌𝑂𝑈 𝑁𝐸𝐸𝐷 𝑇𝑂 𝐵𝑈𝑌 𝑆𝑈𝐵𝑆𝐶𝑅𝐼𝑃𝑇𝐼𝑂𝑁 𝑇𝑂 𝑈𝑆𝐸 𝑀𝐸👇\n
+𝑇𝐻𝐼𝑆 𝐴𝑅𝐸 𝑀𝑌 𝑃𝐿𝐴𝑁𝑆 
+₹80/1$ - 1 𝑤𝑒𝑒𝑘
+₹120/2$ - 2 𝑤𝑒𝑒𝑘𝑠
+₹140/3$ - 3 𝑤𝑒𝑒𝑘𝑠
+₹160/4$ - 4 𝑤𝑒𝑒𝑘𝑠
+𝑈 𝑊𝐴𝑁𝑇 𝐽𝑈𝑆𝑇 𝐷𝑀 𝑀𝐸 :@fligher""",reply_to_message_id=message.id)
         return
 
     try:
@@ -270,7 +282,13 @@ def thumb(client: pyrogram.client.Client, message: pyrogram.types.messages_and_m
 def showthumb(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
     
     if not checkuser(message):
-        app.send_message(message.chat.id, '__You are either not **Authorized** or **Banned**__',reply_to_message_id=message.id)
+        app.send_message(message.chat.id, """𝐻𝐸𝐿𝐿𝑂 👋 𝑌𝑂𝑈 𝑁𝐸𝐸𝐷 𝑇𝑂 𝐵𝑈𝑌 𝑆𝑈𝐵𝑆𝐶𝑅𝐼𝑃𝑇𝐼𝑂𝑁 𝑇𝑂 𝑈𝑆𝐸 𝑀𝐸👇\n
+𝑇𝐻𝐼𝑆 𝐴𝑅𝐸 𝑀𝑌 𝑃𝐿𝐴𝑁𝑆 
+₹80/1$ - 1 𝑤𝑒𝑒𝑘
+₹120/2$ - 2 𝑤𝑒𝑒𝑘𝑠
+₹140/3$ - 3 𝑤𝑒𝑒𝑘𝑠
+₹160/4$ - 4 𝑤𝑒𝑒𝑘𝑠
+𝑈 𝑊𝐴𝑁𝑇 𝐽𝑈𝑆𝑇 𝐷𝑀 𝑀𝐸 :@fligher""",reply_to_message_id=message.id)
         return
     
     if os.path.exists(f'{message.from_user.id}-thumb.jpg'):
@@ -284,7 +302,13 @@ def showthumb(client: pyrogram.client.Client, message: pyrogram.types.messages_a
 def removethumb(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
     
     if not checkuser(message):
-        app.send_message(message.chat.id, '__You are either not **Authorized** or **Banned**__',reply_to_message_id=message.id)
+        app.send_message(message.chat.id, """𝐻𝐸𝐿𝐿𝑂 👋 𝑌𝑂𝑈 𝑁𝐸𝐸𝐷 𝑇𝑂 𝐵𝑈𝑌 𝑆𝑈𝐵𝑆𝐶𝑅𝐼𝑃𝑇𝐼𝑂𝑁 𝑇𝑂 𝑈𝑆𝐸 𝑀𝐸👇\n
+𝑇𝐻𝐼𝑆 𝐴𝑅𝐸 𝑀𝑌 𝑃𝐿𝐴𝑁𝑆 
+₹80/1$ - 1 𝑤𝑒𝑒𝑘
+₹120/2$ - 2 𝑤𝑒𝑒𝑘𝑠
+₹140/3$ - 3 𝑤𝑒𝑒𝑘𝑠
+₹160/4$ - 4 𝑤𝑒𝑒𝑘𝑠
+𝑈 𝑊𝐴𝑁𝑇 𝐽𝑈𝑆𝑇 𝐷𝑀 𝑀𝐸 :@fligher""",reply_to_message_id=message.id)
         return
     
     
@@ -300,7 +324,13 @@ def removethumb(client: pyrogram.client.Client, message: pyrogram.types.messages
 def ptumb(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
     
     if not checkuser(message):
-        app.send_message(message.chat.id, '__You are either not **Authorized** or **Banned**__',reply_to_message_id=message.id)
+        app.send_message(message.chat.id, """𝐻𝐸𝐿𝐿𝑂 👋 𝑌𝑂𝑈 𝑁𝐸𝐸𝐷 𝑇𝑂 𝐵𝑈𝑌 𝑆𝑈𝐵𝑆𝐶𝑅𝐼𝑃𝑇𝐼𝑂𝑁 𝑇𝑂 𝑈𝑆𝐸 𝑀𝐸👇\n
+𝑇𝐻𝐼𝑆 𝐴𝑅𝐸 𝑀𝑌 𝑃𝐿𝐴𝑁𝑆 
+₹80/1$ - 1 𝑤𝑒𝑒𝑘
+₹120/2$ - 2 𝑤𝑒𝑒𝑘𝑠
+₹140/3$ - 3 𝑤𝑒𝑒𝑘𝑠
+₹160/4$ - 4 𝑤𝑒𝑒𝑘𝑠
+𝑈 𝑊𝐴𝑁𝑇 𝐽𝑈𝑆𝑇 𝐷𝑀 𝑀𝐸 :@fligher""",reply_to_message_id=message.id)
         return
     
     file = app.download_media(message)
@@ -313,7 +343,13 @@ def ptumb(client: pyrogram.client.Client, message: pyrogram.types.messages_and_m
 def change(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
     
     if not checkuser(message):
-        app.send_message(message.chat.id, '__You are either not **Authorized** or **Banned**__',reply_to_message_id=message.id)
+        app.send_message(message.chat.id, """𝐻𝐸𝐿𝐿𝑂 👋 𝑌𝑂𝑈 𝑁𝐸𝐸𝐷 𝑇𝑂 𝐵𝑈𝑌 𝑆𝑈𝐵𝑆𝐶𝑅𝐼𝑃𝑇𝐼𝑂𝑁 𝑇𝑂 𝑈𝑆𝐸 𝑀𝐸👇\n
+𝑇𝐻𝐼𝑆 𝐴𝑅𝐸 𝑀𝑌 𝑃𝐿𝐴𝑁𝑆 
+₹80/1$ - 1 𝑤𝑒𝑒𝑘
+₹120/2$ - 2 𝑤𝑒𝑒𝑘𝑠
+₹140/3$ - 3 𝑤𝑒𝑒𝑘𝑠
+₹160/4$ - 4 𝑤𝑒𝑒𝑘𝑠
+𝑈 𝑊𝐴𝑁𝑇 𝐽𝑈𝑆𝑇 𝐷𝑀 𝑀𝐸 :@fligher""",reply_to_message_id=message.id)
         return
     
     info = extras.getdata(str(message.from_user.id))
@@ -339,7 +375,13 @@ def mdisktext(client: pyrogram.client.Client, message: pyrogram.types.messages_a
     if isPremmium and message.chat.id == temp_channel: return
 
     if not checkuser(message):
-        app.send_message(message.chat.id, '__You are either not **Authorized** or **Banned**__',reply_to_message_id=message.id)
+        app.send_message(message.chat.id, """𝐻𝐸𝐿𝐿𝑂 👋 𝑌𝑂𝑈 𝑁𝐸𝐸𝐷 𝑇𝑂 𝐵𝑈𝑌 𝑆𝑈𝐵𝑆𝐶𝑅𝐼𝑃𝑇𝐼𝑂𝑁 𝑇𝑂 𝑈𝑆𝐸 𝑀𝐸👇\n
+𝑇𝐻𝐼𝑆 𝐴𝑅𝐸 𝑀𝑌 𝑃𝐿𝐴𝑁𝑆 
+₹80/1$ - 1 𝑤𝑒𝑒𝑘
+₹120/2$ - 2 𝑤𝑒𝑒𝑘𝑠
+₹140/3$ - 3 𝑤𝑒𝑒𝑘𝑠
+₹160/4$ - 4 𝑤𝑒𝑒𝑘𝑠
+𝑈 𝑊𝐴𝑁𝑇 𝐽𝑈𝑆𝑇 𝐷𝑀 𝑀𝐸 :@fligher""",reply_to_message_id=message.id)
         return
 
     if message.text[0] == "/":
