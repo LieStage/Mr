@@ -164,7 +164,7 @@ def down(message,link):
     # checking size
     size = split.get_path_size(file)
     if(size > TG_SPLIT_SIZE):
-        app.edit_message_text(message.chat.id, msg.id, "__Splitting__")
+        app.edit_message_text(message.chat.id, msg.id, "__More Than 2GB Splitting__")
         flist = split.split_file(file,size,file,".", TG_SPLIT_SIZE)
         os.remove(file) 
     else:
@@ -201,15 +201,15 @@ def down(message,link):
         # actuall upload
         if info == "V":
             thumb,duration,width,height = mediainfo.allinfo(ele,thumbfile)
-            if not isPremmium : app.send_video(message.chat.id, video=ele, caption=f"<a href ="https://t.me/movie_time_botonly>{partt}**{filename}**</a>", thumb=thumb, duration=duration, height=height, width=width, reply_to_message_id=message.id, progress=progress, progress_args=[message])
+            if not isPremmium : app.send_video(message.chat.id, video=ele, caption=f"<a href ='https://t.me/movie_time_botonly'>{partt}**{filename}**</a>", thumb=thumb, duration=duration, height=height, width=width, reply_to_message_id=message.id, progress=progress, progress_args=[message])
             else:
                 with acc: tmsg = acc.send_video(temp_channel, video=ele, caption=f"{partt}**{filename}**", thumb=thumb, duration=duration, height=height, width=width, progress=progress, progress_args=[message])
                 app.copy_message(message.chat.id, temp_channel, tmsg.id, reply_to_message_id=message.id)
             if "-thumb.jpg" not in thumb: os.remove(thumb)
         else:
-            if not isPremmium : app.send_document(message.chat.id, document=ele, caption=f"<a href ="https://t.me/movie_time_botonly>{partt}**{filename}**</a>", thumb=thumbfile, force_document=True, reply_to_message_id=message.id, progress=progress, progress_args=[message])
+            if not isPremmium : app.send_document(message.chat.id, document=ele, caption=f"<a href ='https://t.me/movie_time_botonly'>{partt}**{filename}**</a>", thumb=thumbfile, force_document=True, reply_to_message_id=message.id, progress=progress, progress_args=[message])
             else:
-                with acc: tmsg = acc.send_document(temp_channel, document=ele, thumb=thumbfile, caption=f"<a href ="https://t.me/movie_time_botonly>{partt}**{filename}**</a>", force_document=True, progress=progress, progress_args=[message])
+                with acc: tmsg = acc.send_document(temp_channel, document=ele, thumb=thumbfile, caption=f"<a href ='https://t.me/movie_time_botonly'>{partt}**{filename}**</a>", force_document=True, progress=progress, progress_args=[message])
                 app.copy_message(message.chat.id, temp_channel, tmsg.id, reply_to_message_id=message.id)
        
         # deleting uploaded file
