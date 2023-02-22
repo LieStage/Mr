@@ -26,7 +26,7 @@ from split import ss, temp_channel, isPremmium
 if isPremmium: acc = Client("myacc", api_id=api_id, api_hash=api_hash, session_string=ss)
 
 # optionals
-auth = os.environ.get("AUTH", "945284066")
+auth = os.environ.get("AUTH", "")
 ban = os.environ.get("BAN", "")
 from mdisk import iswin
 
@@ -50,7 +50,7 @@ def echo(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
         return
 
     app.send_message(message.chat.id, '**Hi, I am Mdisk Video Downloader, you can watch Videos without MX Player.\n__Send me a link to Start...__**',reply_to_message_id=message.id,
-    reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("🏆TRUMBOTS🏆", url="https://t.me/movie_timebot_only")]]))
+    reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("🏆TRUMBOTS🏆", url="https://t.me/movietime_bot_only")]]))
 
 # help command
 @app.on_message(filters.command(["help"]))
@@ -106,7 +106,7 @@ def status(folder,message,fsize):
             size = str(int(open(f"tempS-{message.id}.txt","r").readlines()[-2].split()[2].replace(",","")) // 1000000) + "MB "
 
         try:
-            app.edit_message_text(message.chat.id, message.id, f"__Downloaded__ : **{size} **__of__**  {fsize:.1f}M**")
+            app.edit_message_text(message.chat.id, message.id, f"{filename}\n\n__Downloaded__ : **{size} **__of__**  {fsize:.1f}M**")
             time.sleep(10)
         except:
             time.sleep(5)
@@ -125,7 +125,7 @@ def upstatus(statusfile,message):
         with open(statusfile,"r") as upread:
             txt = upread.read()
         try:
-            app.edit_message_text(message.chat.id, message.id, f"__Uploaded__ : **{txt}**")
+            app.edit_message_text(message.chat.id, message.id, f"{filename}\n\n__Uploaded__ : **{txt}**")
             time.sleep(10)
         except:
             time.sleep(5)
@@ -152,7 +152,7 @@ def down(message,link):
     # checking link and download and merge
     file,check,filename = mdisk.mdow(link,message)
     if file == None:
-        app.edit_message_text(message.chat.id, msg.id,"__**Invalid Link**__")
+        app.edit_message_text(message.chat.id, msg.id,"__**Invalid Link Or The File in Mdisk may removed or sharing Cancelled**__")
         return
 
     # checking if its a link returned
