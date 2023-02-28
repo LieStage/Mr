@@ -30,7 +30,7 @@
             "description": "Get this value from https://my.telegram.org",
             "required": true
         },
-        "ADMIN": {
+        "AUTH": {
             "description": "Username or ID of user or. Separate multiple IDs by space.",
             "required": false
         }
