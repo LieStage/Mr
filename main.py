@@ -69,7 +69,26 @@ def help(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
 **/change** - change upload mode ( default mode is Document )__"""
     app.send_message(message.chat.id, helpmessage, reply_to_message_id=message.id)
 
-
+# about command
+@app.on_message(filters.command(["about"]))
+def help(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
+    
+    if not checkuser(message):
+        app.send_message(message.chat.id, '__You are either not **Authorized** or **Banned**__',reply_to_message_id=message.id)
+        return
+    
+    helpmessage = """╭───────────⍟
+├🤖 𝙼𝚈 𝙽𝙰𝙼𝙴 : <a href =https://t.me/flash_urlBot>ᴍᴅɪsᴋ ᴅᴏᴡɴʟᴏᴅᴇʀ ʙᴏᴛ</a>
+├👑 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁𝚂 : <a href=https://t.me/movie_time_botonly>𝗧𝗥𝗨𝗠𝗕𝗢𝗧𝗦</a> 
+├👨‍💻 𝙿𝚁𝙾𝙶𝚁𝙰𝙼𝙴𝚁 : <a href=https://t.me/FLIGHER>FLIGHER</a>
+├📕 𝙻𝙸𝙱𝚁𝙰𝚁𝚈 : <a href=https://github.com/pyrogram>𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼</a>
+├✏️ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴 : <a href=https://www.python.org>𝙿𝚈𝚃𝙷𝙾𝙽 3</a>
+├💾 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴 : <a href=https://cloud.mongodb.com>𝙼𝙾𝙽𝙶𝙾𝙳𝙱</a>
+├🌀 𝙼𝚈 𝚂𝙴𝚁𝚅𝙴𝚁 : <a href=https://dashboard.heroku.com>𝙷𝙴𝚁𝙾𝙺𝚄</a>
+├📊 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚄𝚂 : v3.6.8 [ 𝙼𝙰𝙹𝙾𝚁 ] """
+    app.send_message(message.chat.id, helpmessage, reply_to_message_id=message.id)
+    
+    
 # check for user access
 def checkuser(message):
     if auth != "" or ban != "":
