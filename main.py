@@ -106,7 +106,7 @@ def status(folder,message,fsize):
             size = str(int(open(f"tempS-{message.id}.txt","r").readlines()[-2].split()[2].replace(",","")) // 1000000) + "MB "
 
         try:
-            app.edit_message_text(message.chat.id, message.id, f"{filename}\n\n__Downloaded__ : **{size} **__of__**  {fsize:.1f}M**")
+            app.edit_message_text(message.chat.id, message.id, f"{filename}\n\n__Downloaded__ : ᴛᴀᴋᴇ sᴏᴍᴇ ᴛɪᴍᴇ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ  ʙᴇ ᴘᴀᴛɪᴇɴᴛ  **{size} **__of__**  {fsize:.1f}M**")
             time.sleep(10)
         except:
             time.sleep(5)
@@ -144,7 +144,7 @@ def down(message,link):
     msg = app.send_message(message.chat.id, '__Downloading__', reply_to_message_id=message.id)
     size = mdisk.getsize(link)
     if size == 0:
-        app.edit_message_text(message.chat.id, msg.id,"__**Invalid Link**__")
+        app.edit_message_text(message.chat.id, msg.id,"__**Invalid Link🧑‍💻 ɪɴᴠᴀʟɪᴅ ⛓ ʟɪɴᴋ ᴍᴇᴀɴ ᴛʜᴇ ғɪʟᴇ sʜᴀʀɪɴɢ ɪs ᴇxᴘɪʀᴇᴅ ᴏʀ ᴄᴏᴘʏʀɪɢʜᴛ 🖇**__")
         return
     sta = threading.Thread(target=lambda:status(str(message.id),msg,size),daemon=True)
     sta.start()
